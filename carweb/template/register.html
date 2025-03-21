@@ -62,9 +62,16 @@
             background-color: #0288d1; /* Darker blue on hover */
         }
         .message {
+            background-color: #ffebee; /* Light red background for messages */
             color: #d32f2f; /* Red for error messages */
-            margin-top: 10px;
-            text-align: center;
+            margin-top: 20px; /* Space between form and message */
+            padding: 15px; /* Padding for the message box */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Center the text */
+            width: 300px; /* Same width as the form */
+            margin-left: auto; /* Center the message box */
+            margin-right: auto; /* Center the message box */
         }
     </style>
 </head>
@@ -81,7 +88,7 @@
         </form>
         <div class="message">
             {% for message in messages %}
-                <h2>{{ message }}</h2>
+                <h4>{{ message }}</h4>
             {% endfor %}
         </div>
     </div>
